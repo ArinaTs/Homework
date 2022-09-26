@@ -9,7 +9,7 @@ int main()
     int a, b, c, p;
     int P, S;
     printf("¬ведите координаты вершин треугольника в формате <x1 y1 x2 y2 x3 y3>: ");
-    scanf("%d %d %d %d %d %d", &x1, &y1, &x2, &y2, &x3, &y3);
+    scanf_s("%d %d %d %d %d %d", &x1, &y1, &x2, &y2, &x3, &y3);
 
     a = sqrt((x2 - x1) * (x2 - x1) + ((y2 - y1) * (y2 - y1)));
     b = sqrt((x3 - x2) * (x3 - x2) + ((y3 - y2) * (y3 - y2)));

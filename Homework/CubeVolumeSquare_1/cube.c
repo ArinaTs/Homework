@@ -8,7 +8,7 @@ int main()
     int a;
     int V, S_side, S_full;
     printf("¬ведите длину ребра куба: ");
-    scanf("%d", &a);
+    scanf_s("%d", &a);
     V = pow(a, 3);
     S_side = pow(a, 2) * 6;
     S_full = pow(a, 2) * 4;

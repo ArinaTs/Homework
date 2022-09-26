@@ -6,7 +6,7 @@ int main()
     int plus, minus, multi, ost;
     float division, av_sq, av_mod;
     printf("¬ведите два числа (через пробел): ");
-    scanf("%d %d", &a, &b);
+    scanf_s("%d %d", &a, &b);
     plus = a + b;
     minus = a - b;
     multi = a * b;
