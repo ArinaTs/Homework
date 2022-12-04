@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="triangle_square_perimetr.c">
+    <ClCompile Include="sort_mass.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
