@@ -453,14 +453,14 @@ int MENU(HANDLE hStdOut, int* size, int* mass)
 			printf("Goodbay!\n");
 			system("pause");
 			free(mass);
-			return 0;
+			_Exit(EXIT_SUCCESS);
 			break;
 
 		}
 	}
 
 	// вывод результата
-
+	return 0;
 }
 // объ¤вление главной функции
 int main() {
