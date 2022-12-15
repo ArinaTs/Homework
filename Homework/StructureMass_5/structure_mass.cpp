@@ -13,10 +13,16 @@ int main() {
 	struct Meals breakfest = { "porridge", "eggs", "apple", "coffee" }, lunch = { "soup", "rice", "bread", "compote" }, dinner = { "pasta", "cutlet", "cucumber", "tea" };
 	food_of_the_day = new struct Meals[3];
 
+
+	// mass = new int [10];
+	// delete [] mass;
+
 	food_of_the_day[0].first = breakfest.first;
 	food_of_the_day[0].second = breakfest.second;
 	food_of_the_day[0].snack = breakfest.snack;
 	food_of_the_day[0].drink = breakfest.drink;
+
+	food_of_the_day[0] = breakfest;
 
 	food_of_the_day[1].first = lunch.first;
 	food_of_the_day[1].second = lunch.second;

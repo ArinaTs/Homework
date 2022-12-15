@@ -22,7 +22,7 @@ void createTime2(struct Time* lesson) {
 	int hours, minutes, seconds;
 
 	std::cout << "Input hours: ";
-	std::cin >> hours;
+	std::cin >> lesson->hours;
 	std::cout << "Input minutes: ";
 	std::cin >> minutes;
 	std::cout << "Input seconds: ";
@@ -39,6 +39,7 @@ struct Time createTime3(struct Time lesson) {
 	next_lesson.hours = lesson.hours;
 	next_lesson.minutes = lesson.minutes;
 	next_lesson.seconds = lesson.seconds;
+	return next_lesson;
 }
 
 //Пример 4.

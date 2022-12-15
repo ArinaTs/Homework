@@ -149,6 +149,13 @@ int main() {
 	struct Patient Bob;
 	Bob.age = 15;
 	Bob.diagnosis = "schizophrenia";
+	//Bob.Param = Bobs;
+	//Bob.Name = Name;
+	//Bob.Param.height = Bobs.height;
+
+	struct Patient Bob = { Name , Bobs , 15, "schizophrenia" };
+	struct Patient Bob = { { "Bobov", "Bobik", "Bobovich" } , { 180, 80 } , 15, "schizophrenia" };
+
 	return 0;
 }
 

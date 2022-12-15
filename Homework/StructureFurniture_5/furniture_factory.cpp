@@ -62,7 +62,12 @@ float liftShkafCost(struct Dimension sizes, int floorsCount, float riseCost) {
 float calculateCost(struct Dimension sizes, float cupboardCost, float paintConsumption, float paintCost, float paintWorkCost, float weight, int floorsCount, float riseCost, float deliveryCost) {
 	float finish;
 	int square = calculateSquare(sizes);
-	finish = calculatePaintingCost(paintConsumption, paintWorkCost, paintCost) + calculateCupboardCost(sizes, cupboardCost, square) + liftShkafCost(sizes, floorsCount, riseCost) + deliveryCost;
+	float shkafCost = calculateCupboardCost(sizes, cupboardCost, square);
+	float paintingCost = calculatePaintingCost(paintConsumption, paintWorkCost, paintCost);
+	float delCost = liftShkafCost(sizes, floorsCount, riseCost) + deliveryCost;
+	std::cout << "Cost by position:" << "\n" << "- cupboard cost: " << shkafCost << "\n" << "- painting cost: " << paintingCost << "\n" << "- delivery cost (with rise): " << delCost << "\n";
+
+	finish = paintingCost + shkafCost + delCost + deliveryCost;
 	return finish;
 }
 int main() {
@@ -80,12 +85,6 @@ int main() {
 	std::cout << "CUPBOARD PARAMETERS\n";
 	input(&cupboard);
 	float cost;
-
-	int square = calculateSquare(cupboard);
-	float shkafCost = calculateCupboardCost(cupboard, cupboardCost, square);
-	float paintingCost = calculatePaintingCost(paintConsumption, paintWorkCost, paintCost);
-	float delCost = liftShkafCost(cupboard, floorsCount, riseCost) + deliveryCost;
-	std::cout << "Cost by position:" << "\n" << "- cupboard cost: " << shkafCost << "\n" << "- painting cost: " << paintingCost << "\n" << "- delivery cost (with rise): " << delCost << "\n";
 
 	cost = calculateCost(cupboard, cupboardCost, paintConsumption, paintCost, paintWorkCost, weight, floorsCount, riseCost, deliveryCost);
 
